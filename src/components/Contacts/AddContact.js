@@ -15,7 +15,7 @@ class AddContact extends Component {
         this.setState({ [e.target.name]: e.target.value });
     }
 
-    onSubmit = (dispatch, e) => {
+    onSubmit = async (dispatch, e) => {
         e.preventDefault();
         
         const { name, email, phone } = this.state;
@@ -45,9 +45,9 @@ class AddContact extends Component {
 
 
         // Post new contact to "database" & Update the state in Context API
-        Axios.post('https://jsonplaceholder.typicode.com/users', newContact)
-            .then(res => dispatch({ type: 'ADD_CONTACT', payload: res.data }));
-        
+        const res = await Axios.post('https://jsonplaceholder.typicode.com/users', newContact)
+        dispatch({ type: 'ADD_CONTACT', payload: res.data });
+            
 
         // Clear the Input fields and state
         this.setState({ name: '', email: '', phone: '', errors: {} });
