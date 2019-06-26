@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 SuperContacts
 React + Context API App Tutorial
+=======
+HEAD
+SuperContacts
+React + Context API App Tutorial
+=======
+
+>>>>>>> 85950040c4b1f3d368e90a49131029cae3a397a0
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
