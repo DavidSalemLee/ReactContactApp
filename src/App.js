@@ -17,7 +17,7 @@ class App extends Component {
             <Provider>
                 <Router>
                     <div className="App">
-                        <Header branding="Super Contacts" />
+                        <Header branding="SuperContacts" />
 
                         <div className="container py-4">
                             <Switch>
@@ -31,7 +31,7 @@ class App extends Component {
                                     exact
                                     path="/about"
                                     render={props => (
-                                        <About {...props} branding="Super Contacts" />
+                                        <About {...props} branding="SuperContacts" />
                                     )}
                                 />
                                 <Route component={NotFound} />
